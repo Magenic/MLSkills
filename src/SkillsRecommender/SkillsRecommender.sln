@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillsRecommender.ModelBuilder", "SkillsRecommender.ModelBuilder\SkillsRecommender.ModelBuilder.csproj", "{43BE2721-AC20-4FFD-9EA0-B728CFB922B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillsRecommender.Library", "SkillsRecommender.Library\SkillsRecommender.Library.csproj", "{F0C086CD-1937-4407-B5E2-45064A9763CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillsRecommender.Api", "SkillsRecommender.Api\SkillsRecommender.Api.csproj", "{662AD256-EEAC-47E2-AE7B-8ADC44C8F495}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43BE2721-AC20-4FFD-9EA0-B728CFB922B0}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{43BE2721-AC20-4FFD-9EA0-B728CFB922B0}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{43BE2721-AC20-4FFD-9EA0-B728CFB922B0}.Release|anycpu.ActiveCfg = Release|anycpu
+		{43BE2721-AC20-4FFD-9EA0-B728CFB922B0}.Release|anycpu.Build.0 = Release|anycpu
+		{F0C086CD-1937-4407-B5E2-45064A9763CA}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{F0C086CD-1937-4407-B5E2-45064A9763CA}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{F0C086CD-1937-4407-B5E2-45064A9763CA}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{F0C086CD-1937-4407-B5E2-45064A9763CA}.Release|anycpu.Build.0 = Release|Any CPU
+		{662AD256-EEAC-47E2-AE7B-8ADC44C8F495}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{662AD256-EEAC-47E2-AE7B-8ADC44C8F495}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{662AD256-EEAC-47E2-AE7B-8ADC44C8F495}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{662AD256-EEAC-47E2-AE7B-8ADC44C8F495}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

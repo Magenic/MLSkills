@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\magenic_skills.csv" />
+    <None Remove="Data\Magenic_Min_Skills.csv" />
+    <None Remove="Data\Magenic_employee_skills.csv" />
+    <None Remove="Data\SkillRecommenderModel.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Magenic_Min_Skills.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Magenic_skills.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Magenic_employee_skills.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\SkillRecommenderModel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkillsRecommender.Library\SkillsRecommender.Library.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.Recommender" Version="0.17.1" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.1" />
+  </ItemGroup>
+</Project>
