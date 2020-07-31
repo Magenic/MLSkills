@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.ML;
 
@@ -22,9 +21,7 @@ namespace SkillsRecommender.Library
 
             var allEmployeeSkills = DataAccess.LoadEmployeeSkillData(mlContext, employeeSkillFileLocation, skills, personnelNumber);
             var employeeSkills = mlContext.Data
-                .CreateEnumerable<EmployeeSkillTrainer>(allEmployeeSkills, reuseRowObject: false)
-                .Where(_ => _.PersonnelNumber == personnelNumber).ToList();
-
+                .CreateEnumerable<EmployeeSkillTrainer>(allEmployeeSkills, reuseRowObject: false).ToList();
 
             foreach (var skill in skills)
             {
@@ -40,7 +37,9 @@ namespace SkillsRecommender.Library
                     currentSkills.Add(skill);
                 }
             }
-            returnValue = returnValue.Where(_ => _.PredictedLabel).OrderByDescending(_ => _.Score).Take(20).ToList();
+            returnValue = returnValue.OrderByDescending(_ => _.Score).Take(10).ToList();
+
+            returnValue.RemoveAll(_ => float.IsNaN(_.Score));
 
             return (currentSkills, returnValue);
         }

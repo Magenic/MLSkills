@@ -30,7 +30,7 @@ namespace SkillsRecommender.Api.Controllers
             var (currentSkills, recomendedSkills) = Prediction.GetRecommendedSkills(modelPath, employeeSkillPath, skillListPath, employeeId);
 
             returnValue.CurrentSkills = currentSkills.AsEnumerable();
-            returnValue.RecomendedSkills = recomendedSkills;
+            returnValue.RecommendedSkills = recomendedSkills;
             return returnValue;
         }
     }

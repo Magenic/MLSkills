@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 namespace SkillsRecommender.Library
 {
     public class EmployeeSkillTrainer
@@ -7,12 +7,11 @@ namespace SkillsRecommender.Library
         public float SkillId { get; set; }
         public float JobAreaId { get; set; }
         public float SkillOfferingId { get; set; }
-        public bool HasSkill { get; set; }
-        //public float SkillLevel { get; set; }
+        public float Label { get; set; }
 
-        //public string Features
-        //{
-        //    get { return $"{SkillId.ToString("D5")}|{JobAreaId.ToString("D5")}|{SkillOfferingId.ToString("D5")}"; }
-        //}
+        public string Features
+        {
+            get { return $"{SkillId.ToString().PadLeft(5, '0')}|{JobAreaId.ToString().PadLeft(5, '0')}|{SkillOfferingId.ToString().PadLeft(5, '0')}"; }
+        }
     }
 }

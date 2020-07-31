@@ -9,7 +9,7 @@ namespace SkillsRecommender.Library
     {
         public static IDataView LoadEmployeeSkillData(MLContext mlContext, string dataPath, List<Skill> skillData, string personnelNumber = "")
         {
-            IDataView dataView = mlContext.Data.LoadFromTextFile<EmployeeSkill>(dataPath, hasHeader: true, separatorChar: ',', allowSparse: true);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<EmployeeSkill>(dataPath, hasHeader: true, separatorChar: Constants.SeparatorCharacter, allowSparse: true);
 
             var employeeSkills = mlContext.Data.CreateEnumerable<EmployeeSkill>(dataView, reuseRowObject: false).ToList();
 
@@ -18,43 +18,6 @@ namespace SkillsRecommender.Library
 
             if (string.IsNullOrEmpty(personnelNumber))
             {
-                //var employeeGroups = employeeSkills.GroupBy(_ => _.PersonnelNumber)
-                //    .ToList();
-                //foreach (var employeeGroup in employeeGroups)
-                //{
-                //    var employeeId = employeeGroup.Key;
-                //    foreach (var skill in skillData)
-                //    {
-                //        // There may be duplicates from Saba
-                //        var employeeSkill = employeeSkills.FirstOrDefault(_ =>
-
-                //            _.PersonnelNumber == employeeId &&
-                //            _.SkillId == skill.SkillId);
-                //        if (employeeSkill != null)
-                //        {
-                //            returnList.Add(new EmployeeSkillTrainer
-                //            {
-                //                PersonnelNumber = employeeId,
-                //                JobAreaId = employeeSkill.JobAreaId,
-                //                SkillId = skill.SkillId,
-                //                SkillOfferingId = skill.SkillOfferingId,
-                //                HasSkill = true
-                //            });
-                //        }
-                //        else
-                //        {
-                //            returnList.Add(new EmployeeSkillTrainer
-                //            {
-                //                PersonnelNumber = employeeId,
-                //                JobAreaId = employeeSkills.First(_ => _.PersonnelNumber == employeeId).JobAreaId,
-                //                SkillId = skill.SkillId,
-                //                SkillOfferingId = skill.SkillOfferingId,
-                //                HasSkill = false
-                //            });
-                //        }
-                //    }
-
-                //}
                 foreach (var employeeSkill in employeeSkills)
                 {
                     returnList.Add(new EmployeeSkillTrainer
@@ -63,7 +26,7 @@ namespace SkillsRecommender.Library
                         JobAreaId = employeeSkill.JobAreaId,
                         SkillId = employeeSkill.SkillId,
                         SkillOfferingId = skillData.Single(_ => _.SkillId == employeeSkill.SkillId).SkillOfferingId,
-                        HasSkill = true
+                        Label = CalculateRating(employeeSkills, employeeSkill.SkillId, employeeSkill.JobAreaId)
                     });
                 }
             }
@@ -78,8 +41,7 @@ namespace SkillsRecommender.Library
                         JobAreaId = employeeSkill.JobAreaId,
                         SkillId = employeeSkill.SkillId,
                         SkillOfferingId = skillData.Single(_ => _.SkillId == employeeSkill.SkillId).SkillOfferingId,
-                        //SkillLevel = employeeSkill.SkillLevel
-                        HasSkill = true
+                        Label = CalculateRating(employeeSkills, employeeSkill.SkillId, employeeSkill.JobAreaId)
                     });
                 }
             }
@@ -87,9 +49,17 @@ namespace SkillsRecommender.Library
             return mlContext.Data.LoadFromEnumerable(returnList);
         }
 
+        private static float CalculateRating(List<EmployeeSkill> employeeSkills, float skillId, float jobAreaId)
+        {
+            var countOfSkills = employeeSkills.Count(_ => _.SkillId == skillId && _.JobAreaId == jobAreaId);
+            var totalSkillLevel = employeeSkills.Where(_ => _.SkillId == skillId && _.JobAreaId == jobAreaId).Sum(_ => _.SkillLevel);
+            var factoredSkillLevel = totalSkillLevel * Constants.SkillWeight;
+            return (float)(countOfSkills + factoredSkillLevel);
+        }
+
         public static List<Skill> LoadSkillData(MLContext mlContext, string dataPath)
         {
-            IDataView dataView = mlContext.Data.LoadFromTextFile<Skill>(dataPath, hasHeader: true, separatorChar: ',');
+            IDataView dataView = mlContext.Data.LoadFromTextFile<Skill>(dataPath, hasHeader: true, separatorChar: Constants.SeparatorCharacter);
 
             var returnValue = mlContext.Data.CreateEnumerable<Skill>(dataView, reuseRowObject: false).ToList();
 

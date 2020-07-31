@@ -9,6 +9,5 @@ namespace SkillsRecommender.Library
         public float JobAreaId { get; set; }
         public float SkillOfferingId { get; set; }
         public string SkillDescription { get; set; }
-        public bool PredictedLabel { get; set; }
     }
 }

@@ -1,0 +1,221 @@
+﻿{
+  "recommendedSkills": [
+    {
+      "personnelNumber": "E3407",
+      "score": 89.848816,
+      "skillId": 609,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Area\\Regression"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 62.77841,
+      "skillId": 604,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Activities\\Test Reporting"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 56.671036,
+      "skillId": 623,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Manual\\SQL"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 49.641575,
+      "skillId": 576,
+      "jobAreaId": 4,
+      "skillOfferingId": 9,
+      "skillDescription": "Project Management\\Methodology\\Agile Testing"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 46.687027,
+      "skillId": 620,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Manual\\Database"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 44.561893,
+      "skillId": 611,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Area\\User Acceptance Testing"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 42.171585,
+      "skillId": 610,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Area\\System Testing"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 41.561756,
+      "skillId": 608,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Area\\Integration"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 40.85439,
+      "skillId": 50,
+      "jobAreaId": 4,
+      "skillOfferingId": 1,
+      "skillDescription": "Application Development\\Languages\\JavaScript"
+    },
+    {
+      "personnelNumber": "E3407",
+      "score": 40.482277,
+      "skillId": 656,
+      "jobAreaId": 4,
+      "skillOfferingId": 10,
+      "skillDescription": "Quality Engineering\\Tools\\HP Quality Center"
+    }
+  ],
+  "currentSkills": [
+    {
+      "skillId": 47,
+      "description": "Application Development\\Languages\\C#",
+      "skillOfferingId": 1
+    },
+    {
+      "skillId": 49,
+      "description": "Application Development\\Languages\\Java",
+      "skillOfferingId": 1
+    },
+    {
+      "skillId": 146,
+      "description": "Application Development\\Web Client\\CSS",
+      "skillOfferingId": 1
+    },
+    {
+      "skillId": 189,
+      "description": "Application Development\\zNOT IN USE\\Web Client: HTML5",
+      "skillOfferingId": 1
+    },
+    {
+      "skillId": 193,
+      "description": "Business Analysis\\Data\\Database Queries",
+      "skillOfferingId": 2
+    },
+    {
+      "skillId": 249,
+      "description": "Business Analysis\\Tools\\JIRA: Task Management",
+      "skillOfferingId": 2
+    },
+    {
+      "skillId": 254,
+      "description": "Business Analysis\\Tools\\VS TFS: Work Item Management",
+      "skillOfferingId": 2
+    },
+    {
+      "skillId": 375,
+      "description": "Data Platform\\Database\\MySQL",
+      "skillOfferingId": 5
+    },
+    {
+      "skillId": 423,
+      "description": "Delivery\\Activity\\User Story Estimation",
+      "skillOfferingId": 6
+    },
+    {
+      "skillId": 428,
+      "description": "Delivery\\Lead\\Manila QA",
+      "skillOfferingId": 6
+    },
+    {
+      "skillId": 443,
+      "description": "Delivery\\Role\\Automation Engineer",
+      "skillOfferingId": 6
+    },
+    {
+      "skillId": 450,
+      "description": "Delivery\\Role\\Manual Tester",
+      "skillOfferingId": 6
+    },
+    {
+      "skillId": 452,
+      "description": "Delivery\\Role\\QA Lead",
+      "skillOfferingId": 6
+    },
+    {
+      "skillId": 600,
+      "description": "Quality Engineering\\Activities\\Exploratory Testing",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 601,
+      "description": "Quality Engineering\\Activities\\Risk Identification",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 603,
+      "description": "Quality Engineering\\Activities\\Test Design",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 607,
+      "description": "Quality Engineering\\Area\\Fuctional",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 613,
+      "description": "Quality Engineering\\Automation\\Database",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 617,
+      "description": "Quality Engineering\\Automation\\Web Service",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 618,
+      "description": "Quality Engineering\\Automation\\Web Site",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 621,
+      "description": "Quality Engineering\\Manual\\Mobile",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 625,
+      "description": "Quality Engineering\\Manual\\Web Site",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 654,
+      "description": "Quality Engineering\\Tools\\Cucumber",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 661,
+      "description": "Quality Engineering\\Tools\\MAQS",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 662,
+      "description": "Quality Engineering\\Tools\\MS Test Manager (MTM)",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 671,
+      "description": "Quality Engineering\\Tools\\Selenium",
+      "skillOfferingId": 10
+    },
+    {
+      "skillId": 678,
+      "description": "Quality Engineering\\Tools\\TestRail",
+      "skillOfferingId": 10
+    }
+  ]
+}

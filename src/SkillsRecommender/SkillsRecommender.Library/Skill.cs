@@ -4,11 +4,11 @@ namespace SkillsRecommender.Library
 {
     public class Skill
     {
-        [LoadColumn(0)]
+        [LoadColumn(Constants.SkillSkillIdColumn)]
         public float SkillId { get; set; }
-        [LoadColumn(1)]
+        [LoadColumn(Constants.SkillDescriptionColumn)]
         public string Description { get; set; }
-        [LoadColumn(2)]
+        [LoadColumn(Constants.SkillSkillOfferingIdColumn)]
         public float SkillOfferingId { get; set; }
     }
 }

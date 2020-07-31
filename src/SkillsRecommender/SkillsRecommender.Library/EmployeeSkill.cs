@@ -4,13 +4,13 @@ namespace SkillsRecommender.Library
 {
     public class EmployeeSkill
     {
-        [LoadColumn(0)]
+        [LoadColumn(Constants.PersonnelColumn)]
         public string PersonnelNumber { get; set; }
-        [LoadColumn(2)]
+        [LoadColumn(Constants.SkillIdColumn)]
         public float SkillId { get; set; }
-        [LoadColumn(4)]
-        public float SkillLevel { get; set; }
-        [LoadColumn(6)]
+        [LoadColumn(Constants.SkillLevelColumn)]
+        public int SkillLevel { get; set; }
+        [LoadColumn(Constants.JobAreaIdColumn)]
         public float JobAreaId { get; set; }
     }
 }

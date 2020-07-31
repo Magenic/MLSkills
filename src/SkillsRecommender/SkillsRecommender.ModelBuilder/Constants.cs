@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SkillsRecommender.Api
+namespace SkillsRecommender.ModelBuilder
 {
     public class Constants
     {
@@ -7,5 +7,6 @@ namespace SkillsRecommender.Api
         public const string Skill_file = "Magenic_Skills.csv";
         public const string Employee_skills_file = "Magenic_Employee_Skills.csv";
         public const string model_file = "SkillRecommenderModel.zip";
+
     }
 }
